@@ -1,0 +1,63 @@
+
+:root {
+  --order: 1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  border: 1px solid #ccc;
+  padding: 1em;
+  max-width: 200px;
+  margin: 2em auto;
+  width: 90%;
+}
+
+.list {
+  list-style: none;
+}
+.list li {
+  -webkit-animation: slideToRight 1s infinite alternate;
+          animation: slideToRight 1s infinite alternate;
+  -webkit-animation-delay: calc(var(--order) * 0.2s);
+          animation-delay: calc(var(--order) * 0.2s);
+  border: 1px solid #ccc;
+  border-top: 0;
+  padding: 0.5em 1em;
+}
+.list li:first-child {
+  border-top: 1px solid #ccc;
+}
+
+@-webkit-keyframes slideToRight {
+  from {
+    text-indent: 0;
+  }
+  to {
+    text-indent: 70px;
+  }
+}
+
+@keyframes slideToRight {
+  from {
+    text-indent: 0;
+  }
+  to {
+    text-indent: 70px;
+  }
+}
